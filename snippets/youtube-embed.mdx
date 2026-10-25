@@ -1,0 +1,19 @@
+export const YouTubeEmbed = ({ id, title }) => (
+  <div style={{ marginBottom: '24px' }}>
+    <Frame>
+      <iframe
+        className="w-full aspect-video rounded-xl"
+        src={`https://www.youtube.com/embed/${id}`}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </Frame>
+    <p style={{ fontSize: '13px', color: '#6b7280', marginTop: '8px' }}>
+      Watch on YouTube:{' '}
+      <a href={`https://www.youtube.com/watch?v=${id}`} target="_blank" rel="noopener noreferrer">
+        {title}
+      </a>
+    </p>
+  </div>
+);
